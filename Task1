@@ -1,0 +1,50 @@
+## Question 1: Find the Employee(s) with the Highest Salary
+
+Given the employees table:
+
+| emp_id | name              |    salary  | manager_id |
+|--------|--------------|--------  |-------------|
+| 1            | John Doe.      | 80000   | NULL.            |
+| 2           | Jane Smith     | 75000   | 1                     |
+| 3           | Michael Jones| 90000  | 1                    |
+| 4           | Alice Lee         | 60000  | 2                   |
+| 5           | David Brown   | 85000  | 3                    |
+
+**Task:** Write a SQL query to find the employee(s) having the highest salary.
+
+
+Solution:- select max(salary) from employee
+
+
+
+
+
+
+
+
+## Question 2: Find Employees with a Salary Higher Than Their Manager
+
+Given the employees table:
+
+| emp_id | name              |    salary  | manager_id |
+|--------|--------------|--------  |-------------|
+| 1            | John Doe.      | 80000   | NULL.            |
+| 2           | Jane Smith     | 75000   | 1                     |
+| 3           | Michael Jones| 90000  | 1                    |
+| 4           | Alice Lee         | 60000  | 2                   |
+| 5           | David Brown   | 85000  | 3                    |
+
+**Task:** Write a SQL query to find all the employees whose salary is higher than that of their respective manager.
+
+
+Solution:- select emp1.name from employee as emp1, employee as emp2 where emp1.manager_id == emp2.emp_id and emp1.salary>emp2.salary
+
+
+
+
+
+
+
+
+
+
